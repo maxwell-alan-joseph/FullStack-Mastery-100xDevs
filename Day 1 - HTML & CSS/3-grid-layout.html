@@ -1,0 +1,35 @@
+<head>
+    <meta charset ="UTF-8">
+    <meta name="viewport" content="width:device-width" initial-scale="1.0">
+    <title>Grid-Layout</title>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            width: 1200px;
+            height: 10vh;
+        }
+
+        .red{
+            display: grid;
+            place-content: center;
+            background-color: rgb(242, 61, 61);
+        }
+
+        .blue{ 
+            display: grid; 
+            place-content: center;
+            background-color: rgb(52, 52, 242);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <span class="red"> left </span>
+        <span class="blue"> Right </span>
+    </div>
+</body>
