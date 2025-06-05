@@ -1,0 +1,15 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+</head>
+
+<body>
+    <div id = "add"></div>
+    <script>
+        async function  fetchPost(){
+            const res = await axios.get("http://localhost:3000/sum/1/65");
+            document.getElementById("add").innerHTML = res.data.sum;
+        }
+
+        fetchPost();
+    </script>
+</body>
