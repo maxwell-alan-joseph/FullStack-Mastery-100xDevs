@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Authentication Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width: device-width, intial-scale=1.0">
+
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div>
+            Signup
+                <input id="signup-username" type="text" placeholder="Username">
+                <input id="signup-password" type = "password" placeholder = "Password">
+                <button onclick = signup()>Sign Up</button>
+        </div>
+        <div>
+            SignIn
+                <input id="signin-username" type = "text" placeholder = "Username">
+                <input id="signin-password" type = "password" placeholder = "Password">
+                <button onclick = signin()>Sign In</button>
+        </div>
+        <br>
+        <div>
+            User Information:
+            <div id="user-info"></div>
+        </div>
+        <br>
+        <div>
+            <button onclick=logout()>logout</button>
+        </div>
+    </body>
+</html>

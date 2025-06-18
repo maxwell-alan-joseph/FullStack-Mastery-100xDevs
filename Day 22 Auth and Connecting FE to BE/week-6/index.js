@@ -8,9 +8,28 @@ app.use(express.json());
 
 const users=[]
 
-function auth (req, res, next) {}
+function auth (req, res, next) {
+    const token = req.headers.authorization
 
-app.post("/signup", auth, (req, res) => {
+    if(token) {
+        jwt.verify(token, JWT_SECRET, (err, decoded) => {
+            if (err) {
+                res.status(400).send({
+                    message: "Unauthorized"
+                })
+            } else {
+                req.user = decoded;
+                next();
+            }
+        })
+    } else {
+        res.status(401).send({
+            message: "Unauthorized"
+        })
+    }
+}
+
+app.post("/signup", (req, res) => {
      const username = req.body.username; 
      const password = req.body.password
 
@@ -23,7 +42,7 @@ app.post("/signup", auth, (req, res) => {
      })
 });
 
-app.post("/signin", auth, (req, res) => {
+app.post("/signin", (req, res) => {
     const username = req.body.username;
     const password = req.body.password
 
@@ -47,20 +66,12 @@ app.post("/signin", auth, (req, res) => {
 });
 
 app.get("/me", auth, (req, res) => {
-    const token = req.headers.authorization;
-    const userDetails = jwt.verify(token, JWT_SECRET);
+    const user = req.user; 
 
-    const username = userDetails.username; 
-    const user = users.find(user => user.username === username);
-
-    if (user) {
-        res.send({
-            username: user.username
-        })
-    } else {
-        res.status(401).send({
-            message: "Unauthorized"
-        })
-    }
+    res.send({
+        username: user.username
+    })
 
 });
+
+app.listen(3000);
