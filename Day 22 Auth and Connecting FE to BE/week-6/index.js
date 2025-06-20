@@ -8,6 +8,10 @@ app.use(express.json());
 
 const users=[]
 
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html")
+})
+
 function auth (req, res, next) {
     const token = req.headers.authorization
 
