@@ -48,6 +48,28 @@ node index.js       # Start the server on port 3000
 
 > “Secure the basics before scaling the system.” — This module emphasized the foundations of secure API design and MongoDB integration.
 
+## 🖼️ Screenshots
+
+Below are sample outputs and Postman flows captured during development:
+
+[Signup API](<screenshots/signup endpoint.png>)
+*User registration request using Postman*
+
+[Signin API](<screenshots/signin endpoint.png>)
+*Login request returning JWT token*
+
+[Creating a todo with JWT](<screenshots/creating a todo with jwt.png>)
+*Creating a todo with authenticated JWT*
+
+[Creating a todo](<screenshots/creating a todo.png>)
+*Creating a todo in postman*
+
+[List of todos in postman](<screenshots/todos postman.png>)
+*list of todos displayed in postman*
+
+[List of users in database](<screenshots/users database.png>)
+*list of users in mongodb databse via compass* 
+
 ---
 
 🧠 Next Step: Add update/delete functionality, input validation, and hash passwords with bcrypt.
