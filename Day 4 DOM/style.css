@@ -1,0 +1,111 @@
+body{
+    background-color: rgb(15, 15, 16);
+    color: rgb(237, 237, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family:  'courier new', monospace;
+    font-size: 22px;
+    
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.584);
+    box-shadow: 0 0 60px rgb(75, 48, 97) ;
+    border: 5x solid rgb(126, 44, 138);
+    border-radius: 10px;
+    padding: 30px;
+    width: 700px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.input-section{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"]{
+    padding: 10px;
+    width: 380px;
+    border: 2px solid rgb(49, 43, 51);
+    border-radius: 4px;
+    
+    background-color: rgb(24, 20, 24);
+    color: rgb(255, 255, 255);
+    font-family:  'courier new', monospace;
+}
+
+input[type="checkbox"]:checked ~ span {
+    text-decoration: line-through;
+}
+
+.add-btn{
+    margin-left: 30px;
+    padding: 7px 14px;
+    border: 2px solid rgb(49, 43, 51);
+    border-radius: 4px;
+    background-color: rgb(24, 20, 24);
+    color: rgb(233, 230, 230);
+    font-family: 'courier new', monospace;
+}
+
+.add-btn:hover{
+    background-color: rgb(239, 208, 252);
+    color: rgb(79, 76, 76);
+    cursor: pointer;
+}
+
+#todo-list{
+    display: flex;
+    flex-direction: column;;
+    gap: 12px;
+}
+
+.todo-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.temp{
+    margin-right: 90px; 
+}
+
+.edit-btn, .delete-btn{
+    padding: 5px 10px;
+    border: 2px solid rgb(49, 43, 51);
+    border-radius: 4px;
+    background-color: rgb(24, 20, 24);
+    color: rgb(233, 230, 230);
+    font-family:  'courier new', monospace;
+}
+
+.edit-btn:hover, .delete-btn:hover{
+     background-color: rgb(239, 208, 252);
+    color: rgb(79, 76, 76);
+    cursor: pointer;
+}
+
+.delete-all{
+    margin-top: 30px;
+    padding: 7px 14px;
+    align-items: center;
+    border: 2px solid rgb(49, 43, 51);
+    border-radius: 4px;
+    background-color: rgb(79, 76, 76);
+    color: snow;
+    font-family: 'courier new', monospace;
+}
+
+.delete-all:hover{
+    background-color: rgb(239, 208, 252);
+    color: rgb(79, 76, 76);
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,43 @@
+<head>
+    <title>ToDo Application</title>
+    <meta charset = "UTF-8" name="viewport"  content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="input-section">
+            <input id="inp" type="text" placeholder ="add your todo's here" />
+            <button class="add-btn" onclick="addToDo()">Add</button>
+        </div>
+
+        <div id="todo-list">
+             <div class="todo-item" id="1-item">
+                <div class="temp">
+                    <input type="checkbox" />
+                    <span>Add your todo here 1</span>
+                </div>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn" onclick="deleteitem(1)">Delete</button>
+            </div>
+            <div class="todo-item">
+                <div class="temp">
+                    <input type="checkbox" />
+                    <span>Add your todo here 1</span>
+                </div>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn" onclick="deleteitem(2)">Delete</button>
+            </div>
+
+        </div>
+       
+        <button class="delete-all" onclick="deleteAll()">Delete Everything</button>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>

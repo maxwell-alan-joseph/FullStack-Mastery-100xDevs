@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Authentication Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width: device-width, intial-scale=1.0">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+        <script>
+            async function signup() {
+    const username = document.getElementById("signup-username").value;
+    const password = document.getElementById("signup-password").value; 
+
+    await axios.post("http://localhost:3000/signup", {
+        username: username, 
+        password: password
+    });
+
+    document.getElementById("signup-username").value = "";
+    document.getElementById("signup-password").value = "";
+
+    alert ("You're signed up")
+}
+
+async function getUserInformation() {
+    const token = localStorage.getItem("token");
+
+    if(token) {
+        const response = await axios.get("http://localhost:3000/me", {
+            headers: {
+                Authorization: token
+            }
+        });
+        document.getElementById("user-info").innerHTML = response.data.username;
+    }
+}
+
+
+async function signin() {
+    const username = document.getElementById("signin-username").value;
+    const password = document.getElementById("signin-password").value;
+
+    const response = await axios.post("http://localhost:3000/signin", {
+        username: username,
+        password: password
+    }); 
+
+    localStorage.setItem("token", response.data.token);
+
+    document.getElementById("signin-username").value = "";
+    document.getElementById("signin-password").value = "";
+
+
+    alert("You are signed in");
+    getUserInformation();
+} 
+
+
+
+
+
+async function logout() {
+    localStorage.removeItem("token");
+    document.getElementById("user-info").innerHTML = "";
+
+    document.getElementById("signup-username").value = "";
+    document.getElementById("signup-password").value = "";
+
+    document.getElementById("signin-username").value = "";
+    document.getElementById("signin-password").value = "";
+    
+    alert("You are logged out");
+
+}
+
+
+
+        </script>
+    </head>
+
+    <body>
+        <div>
+            Signup
+                <input id="signup-username" type="text" placeholder="Username">
+                <input id="signup-password" type = "password" placeholder = "Password">
+                <button onclick = "signup()">Sign Up</button>
+        </div>
+        <div>
+            SignIn
+                <input id="signin-username" type = "text" placeholder = "Username">
+                <input id="signin-password" type = "password" placeholder = "Password">
+                <button onclick = "signin()">Sign In</button>
+        </div>
+        <br>
+        <div>
+            User Information:
+            <div id="user-info"></div>
+        </div>
+        <br>
+        <div>
+            <button onclick="logout()">logout</button>
+        </div>
+        
+    </body>
+</html>
