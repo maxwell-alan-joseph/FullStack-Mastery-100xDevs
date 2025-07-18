@@ -2,7 +2,7 @@ import './App.css'
 import miguel from './assets/miguel.jpg'
 
 const style = { 
-  backgroundColor: "black",
+  backgroundColor: "#000",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -31,10 +31,10 @@ function PostComponent() {
         display: "flex",
         flexDirection: "column",
         gap: 1,
-        border: "1px solid gray",
+        border: "1px solid #2f3336",
         borderRadius: 13,
         padding: 19,
-        backgroundColor: "GrayText",
+        backgroundColor: "#1e1e1e",
         maxWidth: 700
       }}>
         
@@ -52,7 +52,7 @@ function PostComponent() {
           </div>
 
           <div style={{ 
-            color: "white",
+            color: "#e7e9ea",
             display: "flex",
             alignItems: "center",
             gap: 4,
@@ -64,7 +64,7 @@ function PostComponent() {
         </div>
 
         <div style={{
-          color: "white",
+          color: "#d9d9d9",
           marginLeft: 40,
           lineHeight: "1.2",
           marginTop: -4
@@ -80,10 +80,10 @@ function PostComponent() {
         display: "flex",
         flexDirection: "column",
         gap: 20,
-        border: "1px solid gray",
+        border: "1px solid #333333",
         borderRadius: 13,
         padding: 19,
-        backgroundColor: "GrayText",
+        backgroundColor: "#1a1a1a",
         maxWidth: 700
       }}>
         
@@ -101,7 +101,7 @@ function PostComponent() {
           </div>
 
           <div style={{ 
-            color: "white",
+            color: "#ffffff",
             display: "flex",
             alignItems: "center",
             gap: 4,
@@ -113,7 +113,7 @@ function PostComponent() {
         </div>
 
         <div style={{
-          color: "white",
+          color: "#cccccc",
           marginLeft: 40, 
           lineHeight: "1.2",
           marginTop: -22
@@ -128,10 +128,10 @@ function PostComponent() {
         display: "flex",
         flexDirection: "column",
         gap: 20,
-        border: "1px solid gray",
+        border: "1px solid #333333",
         borderRadius: 13,
         padding: 19,
-        backgroundColor: "GrayText",
+        backgroundColor: "#1a1a1a",
         maxWidth: 700
       }}>
         
@@ -149,7 +149,7 @@ function PostComponent() {
           </div>
 
           <div style={{ 
-            color: "white",
+            color: "#ffffff",
             display: "flex",
             alignItems: "center",
             gap: 4,
@@ -161,7 +161,7 @@ function PostComponent() {
         </div>
 
         <div style={{
-          color: "white",
+          color: "#cccccc",
           marginLeft: 40, 
           lineHeight: "1.2",
           marginTop: -22
@@ -175,10 +175,10 @@ function PostComponent() {
         display: "flex",
         flexDirection: "column",
         gap: 20,
-        border: "1px solid gray",
+        border: "1px solid #333333",
         borderRadius: 13,
         padding: 19,
-        backgroundColor: "GrayText",
+        backgroundColor: "#1a1a1a",
         maxWidth: 700
       }}>
         
@@ -196,7 +196,7 @@ function PostComponent() {
           </div>
 
           <div style={{ 
-            color: "white",
+            color: "#ffffff",
             display: "flex",
             alignItems: "center",
             gap: 4,
@@ -208,7 +208,7 @@ function PostComponent() {
         </div>
 
         <div style={{
-          color: "white",
+          color: "#cccccc",
           marginLeft: 40, 
           lineHeight: "1.2",
           marginTop: -22
