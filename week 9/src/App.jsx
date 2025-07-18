@@ -3,9 +3,8 @@ import miguel from './assets/miguel.jpg'
 
 const style = { 
   backgroundColor: "black",
-  borderRadius: 10,
-  borderColor: "gray",
   display: "flex",
+  alignItems: "center",
   justifyContent: "center",
   height: "100vh",
   width: "100vw"
@@ -25,18 +24,25 @@ function PostComponent() {
   return (
     <div style = {{
       display: "flex",
-      alignItems: "column",
-      gap: 15
+      alignContent: "center",
+      flexDirection: "column",
+      gap: 0,
+      border: "1px solid gray",
+      borderRadius: 13,
+      padding: 23,
+      backgroundColor: "GrayText"
     }}>
 
       <div style = {{
-        
+        display: "flex", 
+        alignItems: "center", 
+        gap: 15
       }}>
 
         <div id = "img">
           <img src={miguel} style= {{
-          width: 60,
-          height: 60,
+          width: 50,
+          height: 50,
           borderRadius:30
           }}>
           </img>
@@ -49,21 +55,23 @@ function PostComponent() {
           alignItems: "center",
           gap: 7,
         }}>
-          <h3>Toji_</h3>
-          <h4>@binaryChamp_</h4>
-          <h5>15 hrs ago</h5>
+          <h3 style = {{ margin: 0}}>Toji_</h3>
+          <h4 style = {{ margin: 0}}>@binaryChamp_</h4>
+          <h5 style = {{ margin: 0}}>15 hrs ago</h5>
          </div>
 
       </div>
 
       <span style = {{
         color: "white",
-        marginLeft: 75,
+        marginLeft: 50,
+        marginTop: -20,
         whiteSpace: "pre-line"
       }}>
+        {` 
         - Day 18 - Until I land on a job
-        - completed react basics 
-        - working on a new small time react application 
+    - completed react basics 
+        - working on a new small time react application `}
       </span>
 
     </div>
